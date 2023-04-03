@@ -20,6 +20,7 @@ jobs:
         with:
           channel: "stable"
           flutter-version: "3.x"
+          cache: true
 
       - name: Get dependencies
         if: steps.check_files.outputs.files_exists == 'true'
@@ -52,4 +53,4 @@ jobs:
               flutter test -r expanded
           else
               echo "Tests not found."
-          figi
+          fi
